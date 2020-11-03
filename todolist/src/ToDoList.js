@@ -5,13 +5,14 @@ import React, { Fragment, useState, useEffect} from 'react';
   const  ToDoList=()=> {
     const [toDo, setToDo] = useState('');
     const [toDoList, setToDoList] = useState(['leaning','drinking'])
- 
+    const [times, setTimes] = useState(0);
 
     const handleSubmit=e=>{
       e.preventDefault();
       console.log("e",e);
       console.log("toDoList ",toDoList)
       toDoList.push(toDo)
+      setTimes(prevTimes => prevTimes+1)
       return toDoList;
     }
 
@@ -29,8 +30,8 @@ import React, { Fragment, useState, useEffect} from 'react';
             </label>
             <input type="submit" value="Submit" />
           </form>
-          <div>{}</div>
           <div>{toDo}</div>
+          <div>{times}</div>
           <ul>
             {
               toDoList.map((item, index)=>{
