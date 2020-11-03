@@ -1,10 +1,10 @@
 import React from 'react';//为了运行 <App> jsx 语法
 import ReactDOM from 'react-dom';
-import App from './App';
+import ToDoList from './ToDoList';
 
 
 ReactDOM.render(
-    <App />,
+    <ToDoList/>,
   document.getElementById('root')
 );
 
